@@ -1,0 +1,112 @@
+                        Magento
+
+Upgrade
+    sudo php bin/magento setup:upgrade
+Compile
+    sudo php bin/magento setup:di:compile
+Deploy
+    sudo php bin/magento setup:static-content:deploy -f
+Cache Clear
+    sudo php bin/magento c:c
+    sudo php bin/magento c:f
+Permission 
+    sudo chmod -R 777 .
+Developer
+    sudo php bin/magento deploy:mode:set developer
+Magento Template Hints
+    sudo bin/magento dev:template-hints:enable
+Module Enable
+    sudo php bin/magento module:enable --all
+Less Change Run this comment (when we don't have grunt)
+    sudo rm -rf generated/* var/page_cache/* var/view_preprocessed/* var/cache/* pub/static/*
+
+
+                    GIT
+git branch
+git status
+git diff "file path"
+git add "file path"
+git commit -m "short description"
+git push origin <branch_name>
+git pull origin <parentbranch_name>
+git checkout <branch_name> ---> change branch
+git  checkout -b “branch name” ---> new branch
+git fetch --all ---> fetch all branches in the repositary
+
+
+                    GIT CLONE ---> Magento Project
+git clone https:/something/dfg .  ----> this dot used for create the clone file in the current folder.
+sudo composer install
+sudo php bin/magento setup:upgrade
+sudo php bin/magento setup:di:compile
+sudo php bin/magento setup:static-content:deploy -f
+sudo php bin/magento cache:flush
+sudo chmod -R 777 .
+git branch
+git status
+app/etc/env.php  ----> change the db
+
+
+                    Grunt  Run
+sudo grunt exec:store
+sudo grunt watch:store
+sudo chmod -R 777 pub/static/frontend/* var/*
+
+
+                    Grunt Kill
+Find the process id by sudo lsof -i :35729
+Then kill the process by sudo kill -9 PID
+
+
+                Less File Merge stop(DB)
+Less file Name get -> core_config_data -> path like %css% -> merge  -> 0
+
+
+                Remove (Newly added files)
+git config core.fileMode false
+
+
+                GIT Remove Untracked files
+Git clean -f directoryname -> untracked files
+
+
+                Php Version Change
+sudo update-alternatives --config php
+
+
+                TO IMPORT A DATABASE 
+mysql -u username -p database_name < file.sql
+
+                
+                TO EXPORT A DATABASE
+mysqldump -u username -p databaseName > filename.sql
+mysqldump -u root -p ziffity_wp > ziffity_wp.sql
+
+
+                GIT Exclude Files
+Git exclude ---> remove files from local directory
+
+
+                HOSTING
+computer -> var -> www -> html -> your_custom_folder
+computer -> etc -> nginx 
+nginx -> sites-available -> create_your_custom_file -> follow step 4
+Sudo nano local.your_pro_name.com
+ln -s /etc/nginx/sites-available/local.customwp.com /etc/nginx/sites-enabled/local.customwp.com
+Sudo /etc/ nano hosts
+sudo service nginx status
+sudo service nginx restart
+sudo service nginx stop
+
+
+                CLI
+Cd
+Cd /etc/
+Cd nginx
+Ls ->listing
+Ln -> symlink
+mysql -u root -p;
+show databases;
+Create database database_name;
+sudo fuser -k 80/tcp 
+service nginx start

@@ -1,0 +1,13 @@
+                    PROCEDURES
+    1. Create a folder in the themes directory with your custom theme name.
+    2. Create index.php, style.css, screenshot.png (1200*900)
+    3. Create header.php, footer.php, functions.php, front-page.php
+    4. Admin panel → settings → general →  change site title
+    5. Admin panel → settings → reading →  your homepage displays  a static page
+    6. Create 404.php page
+    7. Create folders for css, js, fonts, images
+    8. While creating post you must create single.php and single-post.php
+    9. While creating page you must create page.php and different page templates
+    10. Page.php for default to all pages
+    11. Single.php default to all post pages
+    12. Index.php file for blog post default page (when u change in admin panel for posts page)
