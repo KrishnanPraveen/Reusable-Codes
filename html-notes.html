@@ -1,0 +1,40 @@
+<!-- 
+    1. Always specify the width and height attributes for img tag if it's omitted it casues flicker effect. 
+-->
+<img src="url" alt="image" width="440" height="400">
+<!-- 
+    2. Always specify the loading="lazy" (not supported by all browsers yet) use some lazy libraries for improve page performance.
+-->
+<img src="url" alt="image" width="440" height="400" loading="lazy" class="lazy">
+<!-- 
+    3. Use Preload, Preconnect, Prefetch, Dns Prefetch for fast loading. Use it wisely.
+    preload -- resource download immediately with high priority for current page
+    preconnect -- setup 3rd party domain connection in advance
+    prefetch  -- resource need for next page with low priority
+    dns-prefect -- same as preconnect for old browsers
+    prerender -- user navigate to specific page so speed up the page load
+-->
+<link rel="preload" href="css/style.css" as="style">  
+<link rel="preload" href="font/font.woff2" as="font" type="font/woff2">
+<link rel="prefetch" href="font/font.woff2" as="font" type="font/woff2">
+<link rel="prefetch" href="css/style.css" as="style">
+<link rel="preconnect" href="google.com">
+<link rel="dns-prefetch" href="google.com">
+<link rel="prerender" href="page url">
+<!-- 
+    4. Always specify the noopener noreferrer for target='_blank' element. for prevent new page from window.open bcz 3rd party sites contain pishing contents.
+-->
+<a href="http://google" target="_blank" rel="noopener noreferrer">something</a>
+<!-- 
+    5. must specify the name attribute for the input element  if it's ommitted data can't send to.
+-->
+<input type="text" name="firstname" id="name">
+<!-- 
+    6. video and audio tag attribute set to muted otherwise video won't play on the browser
+-->
+<video autoplay muted loop poster="image url">
+    <source src="url" type="video/mp4">
+</video>
+<audio autoplay muted loop>
+    <source src="url" type="audio/mp3">
+</audio>
